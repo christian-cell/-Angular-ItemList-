@@ -1,0 +1,39 @@
+vamos a iniciar el proyecto con
+$ ng serve --open
+
+todo lo que veamos que empieza por un @ son decoradores que son como comentarios que no los va a ver el navegador pero si angular
+
+De cualquier componente podemos inyectar dentro de las clases variables y renderizarlas en el navegador con doble llave
+{{ variable }}
+También podemo realizar operaciones dentro de estas ,{{ 2*6 }} podemos decir que es la manera de renderizar JS en html de angular
+
+
+Todos los .spec son archivos para hacer testing con typescript
+
+vamos a crear un componente
+$ ng g c components/header
+
+esto lo que hará es crear dentro de app un directorio llamado components y dentro de este un componente header
+
+vamos a crear mas componentes
+$ ng g c components/items
+
+y eliminamos su .espec
+
+dentro de app podemos crear un directorio llamado models donde vamos a guardar tipos que vamos a crear ya que hasta el momento
+solo exite string , arrays , arrays de string , arrays de numeros ...
+
+podemos crear una clase a la que le damos unas propiedades llamada Item y ahora esa variable la podemos tiparla e iniciarla como 
+array vacío.
+
+Ahora podemos crear en Items.component.html una directiva ngFor que va a recorrer un array de objetos que hemos definido en el .testing
+lo recorreremos con el #ngfor como se muestra en app.items.html
+
+Vamos a crear un componente item en singular para mostrar el detalle de cada item
+
+ahora podemos ir a items.html y llamar en vez de usar un div podemos decirle que va a ser el componente app-item , como este
+ya tenía el @Input() con la variable input que es igual a una instacia del modelo podemos pasarselo a items con el Input
+
+FALLO  en esta versión de angular 11 EventEmitter va a ser importado de
+import { EventEmitter } from '@angular/core';
+

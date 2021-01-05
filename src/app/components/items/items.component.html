@@ -1,0 +1,8 @@
+<!-- En el item.ts definimos un Input() llamado item que es igual a una instancia del modelo item por lo tanto aquí 
+abajo le estamos diciendo itera el array que te voy a pasar a través del @Input[item] que es el modelo -->
+
+<!-- Y el decimos en item.html como lo va a renderizar por pantalla -->
+
+<div>
+    <app-item *ngFor="let item of items" [item]="item" (deleteItem)="deleteItem($event)" ></app-item>
+</div>

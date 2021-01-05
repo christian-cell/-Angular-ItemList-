@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "shopping-list"
+  "defaultProject": "shopping-list",
+  "cli": {
+    "analytics": false
+  }
 }
